@@ -1,0 +1,10 @@
+*
+!.gitignore
+!CMakeLists.txt
+!LICENSE
+!README.md
+!nsx-module.yaml
+!includes-api/
+!includes-api/**
+!src/
+!src/**

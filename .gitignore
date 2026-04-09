@@ -8,3 +8,8 @@
 !includes-api/**
 !src/
 !src/**
+!.github/
+!.github/**
+!.clang-format
+!release-please-config.json
+!.release-please-manifest.json

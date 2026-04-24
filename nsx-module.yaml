@@ -2,25 +2,47 @@ schema_version: 1
 module:
   name: nsx-audio
   type: backend_specific
-  version: "0.1.0"
+  version: 0.1.1
 support:
   ambiqsuite: true
   zephyr: false
-summary: PDM audio capture driver for Ambiq SoCs with DMA-backed sampling and callback delivery.
-capabilities: [audio, pdm, microphone, dma]
+summary: >-
+  PDM audio capture driver for Ambiq SoCs with DMA-backed sampling and callback
+  delivery.
+capabilities:
+  - audio
+  - pdm
+  - microphone
+  - dma
 use_cases:
   - Audio capture from on-board or external PDM microphones
   - Keyword spotting and voice-activity front-ends
   - Streaming audio to host over USB or BLE
-agent_keywords: [audio, pdm, microphone, capture, dma, sampling]
+agent_keywords:
+  - audio
+  - pdm
+  - microphone
+  - capture
+  - dma
+  - sampling
 build:
   cmake:
     package: nsx_audio
-    targets: [nsx::audio]
+    targets:
+      - nsx::audio
 depends:
-  required: [nsx-core, nsx-harness, nsx-soc-hal]
+  required:
+    - nsx-core
+    - nsx-harness
+    - nsx-soc-hal
   optional: []
 compatibility:
-  boards: ["*"]
-  socs: [apollo5b, apollo510, apollo510b]
-  toolchains: [arm-none-eabi-gcc, armclang]
+  boards:
+    - '*'
+  socs:
+    - apollo5b
+    - apollo510
+    - apollo510b
+  toolchains:
+    - arm-none-eabi-gcc
+    - armclang

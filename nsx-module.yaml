@@ -23,4 +23,4 @@ depends:
 compatibility:
   boards: ["*"]
   socs: [apollo5b, apollo510, apollo510b]
-  toolchains: [arm-none-eabi-gcc]
+  toolchains: [arm-none-eabi-gcc, armclang]
